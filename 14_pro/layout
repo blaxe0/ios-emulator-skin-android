@@ -1,0 +1,46 @@
+parts {
+    device {
+        display {
+            width 1180
+            height 2556
+            x 0
+            y 0
+        }
+    }
+
+    portrait {
+        background {
+            image bg.png
+        }
+        foreground {
+            mask screen.png
+        }
+        
+    }
+}
+
+layouts {
+    portrait {
+        width 1294
+        height 2656
+        color 0x00000000
+        event EV_SW:0:1
+        part1 {
+            name portrait
+            x 0
+            y 0
+
+        }
+        part2 {
+            name device
+            x 57
+            y 50
+        }
+
+    }
+    
+}
+network {
+      speed full
+      delay none
+}
